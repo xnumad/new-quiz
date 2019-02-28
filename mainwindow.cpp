@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QString>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,96 +18,57 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::validateAnswer(QString correctAnswer)
+{
+    if (ui->eingabe->text() == correctAnswer) {
+        richtigeAntwort++;
+    }
+    else {
+        falscheAntwort++;
+    }
+}
+
 void MainWindow::on_pushButton_clicked()
 {
     switch  (counter) {
     case 0: {
-        if (ui->eingabe->text() =="4") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("4");
+        break;
     }
-    break; case 1: {
-        if (ui->eingabe->text() =="1") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+     case 1: {
+        validateAnswer("1");
         break;
     }
     case 2: {
-        if (ui->eingabe->text() =="3") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("3");
         break;
     }
     case 3: {
-        if (ui->eingabe->text() =="4") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("4");
         break;
     }
     case 4: {
-        if (ui->eingabe->text() =="2") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("2");
         break;
     }
     case 5: {
-        if (ui->eingabe->text() =="3") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("3");
         break;
     }
     case 6: {
-        if (ui->eingabe->text() =="4") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("4");
         break;
     }
     case 7: {
-        if (ui->eingabe->text() =="3") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("3");
         break;
     }
     case 8: {
-        if (ui->eingabe->text() =="3") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("3");
         break;
     }
     case 9: {
-        if (ui->eingabe->text() =="3") {
-                richtigeAntwort++;
-        }
-        else {
-           falscheAntwort++;
-        }
+        validateAnswer("3");
         break;
     }
     }
@@ -135,11 +97,13 @@ void MainWindow::on_pushButton_clicked()
         break;
     case 9:
         if (richtigeAntwort>=6) {
-            ui->label->setText("Herzlichen Glückwunsch, du bist ein richtiger Genie!!! \n:)");
+            ui->label->setText("Herzlichen Glückwunsch, du bist ein richtiges Genie!!! \n:)");
         }
         else {
              ui->label->setText("Leider muss ich dir mitteilen, dass du noch ein Noob bist. \nViel Glück beim nächsten Mal. :(");
         }
         break;
     }
+
+    ui->eingabe->setFocus();
 }
