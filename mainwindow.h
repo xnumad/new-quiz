@@ -16,14 +16,14 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_btn_next_clicked();
     void validateAnswer(QString correctAnswer);
 
 private:
     Ui::MainWindow *ui;
     int counter;
-    int richtigeAntwort;
-    int falscheAntwort;
+    int richtigBeantwortet;
+    int falschBeantwortet;
 };
 
 #endif // MAINWINDOW_H

@@ -34,7 +34,7 @@
      <string>Score:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_next">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -47,20 +47,20 @@
      <string>Next –&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="lbl_question">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>50</y>
+      <y>70</y>
       <width>411</width>
-      <height>101</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="text">
      <string>Question</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="eingabe">
+   <widget class="QLineEdit" name="txt_eingabe">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -83,7 +83,7 @@
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="lbl_title">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -104,6 +104,22 @@
      <string>Ultimate Quiz</string>
     </property>
    </widget>
+   <widget class="QCheckBox" name="chk_correctAnswers">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>240</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Antworten korrigieren</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -111,7 +127,7 @@
      <x>0</x>
      <y>0</y>
      <width>569</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
@@ -129,9 +145,9 @@
  <resources/>
  <connections>
   <connection>
-   <sender>eingabe</sender>
+   <sender>txt_eingabe</sender>
    <signal>returnPressed()</signal>
-   <receiver>pushButton</receiver>
+   <receiver>btn_next</receiver>
    <slot>click()</slot>
    <hints>
     <hint type="sourcelabel">
