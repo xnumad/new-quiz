@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>569</width>
-    <height>372</height>
+    <width>809</width>
+    <height>306</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="lbl_score">
+   <widget class="QLabel" name="lblScore">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>240</y>
-      <width>51</width>
+      <x>630</x>
+      <y>170</y>
+      <width>111</width>
       <height>21</height>
      </rect>
     </property>
@@ -31,64 +31,63 @@
      </font>
     </property>
     <property name="text">
-     <string>Score:</string>
+     <string>Score</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_next">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>230</y>
-      <width>114</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Next –&gt;</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lbl_question">
+   <widget class="QLabel" name="lblQuestion">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>70</y>
-      <width>411</width>
-      <height>81</height>
+      <y>50</y>
+      <width>551</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Question</string>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="txt_eingabe">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>170</y>
-      <width>181</width>
-      <height>31</height>
-     </rect>
+    <property name="alignment">
+     <set>Qt::AlignBottom|Qt::AlignJustify</set>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_score_value">
+   <widget class="QLabel" name="lblScoreValue">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>240</y>
-      <width>61</width>
+      <x>740</x>
+      <y>170</y>
+      <width>41</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>0</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
    </widget>
-   <widget class="QLabel" name="lbl_title">
+   <widget class="QLabel" name="lblTitle">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>30</y>
-      <width>161</width>
+      <x>20</x>
+      <y>10</y>
+      <width>771</width>
       <height>31</height>
      </rect>
     </property>
@@ -103,12 +102,15 @@
     <property name="text">
      <string>Ultimate Quiz</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
-   <widget class="QCheckBox" name="chk_correctAnswers">
+   <widget class="QCheckBox" name="chkCorrectAnswers">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>240</y>
+      <x>650</x>
+      <y>50</y>
       <width>131</width>
       <height>20</height>
      </rect>
@@ -120,13 +122,242 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnReset">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>200</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnswer1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>144</y>
+      <width>272</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Answer 1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnswer4">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>190</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Answer 4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnswer2">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>144</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Answer 2</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAnswer3">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>190</y>
+      <width>272</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Answer 3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAnsweredWrong">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>140</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>falsch beantwortet</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAnsweredCorrectly">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>120</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>richtig beantwortet</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAnsweredWrongValue">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>140</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAnsweredCorrectlyValue">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>120</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblQuestionCounter">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>90</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Frage Nr.</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblQuestionCounterValue">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>90</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>569</width>
+     <width>809</width>
      <height>20</height>
     </rect>
    </property>
@@ -143,22 +374,5 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections>
-  <connection>
-   <sender>txt_eingabe</sender>
-   <signal>returnPressed()</signal>
-   <receiver>btn_next</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>206</x>
-     <y>218</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>294</x>
-     <y>280</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

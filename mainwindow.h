@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <question.h>
+#include "ui_mainwindow.h" //for UI elements like QPushButton
 
 namespace Ui {
 class MainWindow;
@@ -16,14 +18,28 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btn_next_clicked();
-    void validateAnswer(QString correctAnswer);
+    void validateAnswer(QString userAnswer);
+
+    void on_btnAnswer_clicked();
+
+    void on_btnReset_clicked();
 
 private:
     Ui::MainWindow *ui;
-    int counter;
-    int richtigBeantwortet;
-    int falschBeantwortet;
+    void displayLevel(Question *obj);
+    void nextQuestion();
+    void updateScore();
+
+    Question *one;
+    Question *two;
+    Question *three;
+    Question *four;
+    Question *five;
+    Question *six;
+    Question *seven;
+    Question *eight;
+    Question *nine;
+    Question *ten;
 };
 
 #endif // MAINWINDOW_H
