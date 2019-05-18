@@ -3,7 +3,6 @@
 #include <QString>
 #include <QMessageBox>
 #include <time.h>
-#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -58,17 +57,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayLevel(Question *obj)
 {
-    qDebug() << obj->getQuestion();
     ui->lblQuestion->setText(obj->getQuestion());
-    qDebug() << ui->lblQuestion->text();
 
     int random[] = {0,1,2,3};
     srand(time(nullptr)); //initialize random seed
     random_shuffle(std::begin(random), std::end(random)); //randomly shuffle array to display questions
 
-    qDebug() << obj->getAnswers()[random[0]];
     ui->btnAnswer1->setText(obj->getAnswers()[random[0]]);
-    qDebug() << ui->btnAnswer1->text();
     ui->btnAnswer2->setText(obj->getAnswers()[random[1]]);
     ui->btnAnswer3->setText(obj->getAnswers()[random[2]]);
     ui->btnAnswer4->setText(obj->getAnswers()[random[3]]);
